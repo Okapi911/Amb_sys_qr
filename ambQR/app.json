@@ -6,10 +6,12 @@
     "orientation": "portrait",
     "icon": "./assets/icon2.png",
     "userInterfaceStyle": "light",
+    "scheme": "myapp",
     "splash": {
       "image": "./assets/splash2.png",
       "resizeMode": "contain",
-      "backgroundColor": "#000000"
+      "backgroundColor": "#000000",
+      "userInterfaceStyle": "automatic"
     },
     "assetBundlePatterns": [
       "**/*"

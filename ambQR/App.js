@@ -11,7 +11,6 @@ import { A, Nav } from '@expo/html-elements';
 import { NavigationContainer } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import {test} from './test.js';
 import { Inscription } from './inscription.js';
 import { Connexion } from './connexion.js';
 

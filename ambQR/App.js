@@ -13,6 +13,7 @@ import { useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Inscription } from './inscription.js';
 import { Connexion } from './connexion.js';
+import { GameScreen } from './game_screen_qr.js';
 
 const Stack = createStackNavigator();
 
@@ -88,6 +89,7 @@ export default function App() {
       <Stack.Screen name="Accueil" component={AccueilScreen} />
       <Stack.Screen name="Inscription" component={Inscription} />
       <Stack.Screen name="Connexion" component={Connexion} />
+      <Stack.Screen name="GameScreen" component={GameScreen} />
     </Stack.Navigator>
     </NavigationContainer>
   );

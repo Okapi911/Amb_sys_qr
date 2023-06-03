@@ -6,7 +6,7 @@ import {Auth} from './Auth.js'
 import {Account} from './Account.js'
 
 
-export function Test() {
+export function ConnexionPage() {
     const [session, setSession] = useState(null);
   
     useEffect(() => {

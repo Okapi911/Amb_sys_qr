@@ -41,26 +41,26 @@ export function Auth() {
           leftIcon={{ type: 'font-awesome', name: 'envelope' }}
           onChangeText={(text) => setEmail(text)}
           value={email}
-          placeholder="email@address.com"
+          placeholder="email@adresse.com"
           autoCapitalize={'none'}
         />
       </View>
       <View style={styles.verticallySpaced}>
         <Input
-          label="Password"
+          label="Mot de passe"
           leftIcon={{ type: 'font-awesome', name: 'lock' }}
           onChangeText={(text) => setPassword(text)}
           value={password}
           secureTextEntry={true}
-          placeholder="Password"
+          placeholder="Mot de passe > 5 caractères"
           autoCapitalize={'none'}
         />
       </View>
       <View style={[styles.verticallySpaced, styles.mt20]}>
-        <Button title="Sign in" disabled={loading} onPress={() => signInWithEmail()} />
+        <Button title="Se connecter" disabled={loading} onPress={() => signInWithEmail()} />
       </View>
       <View style={styles.verticallySpaced}>
-        <Button title="Sign up" disabled={loading} onPress={() => signUpWithEmail()} />
+        <Button title="S'inscrire" disabled={loading} onPress={() => signUpWithEmail()} />
       </View>
     </View>
   )

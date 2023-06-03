@@ -14,13 +14,13 @@ import { createStackNavigator } from '@react-navigation/stack';
 import {HomeScreen} from './App.js';
 import {Auth} from './Auth.js';
 import {Account} from './Account.js';
-import {Test} from './page_connexion.js'
+import {ConnexionPage} from './page_connexion.js'
 
 
 export function Inscription() {
     return (
     <SafeAreaProvider>
-      <Test />
+      <ConnexionPage />
     </SafeAreaProvider>
     );
 }

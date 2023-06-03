@@ -12,12 +12,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import {HomeScreen} from './App.js';
+import {Auth} from './Auth.js';
+import {Account} from './Account.js';
+import {ConnexionPage} from './page_connexion.js'
 
 
 export function Connexion() {
     return (
     <SafeAreaProvider>
-      <HomeScreen />
+      <ConnexionPage />
     </SafeAreaProvider>
     );
 }

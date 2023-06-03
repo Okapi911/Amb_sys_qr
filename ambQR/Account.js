@@ -2,8 +2,17 @@ import { useState, useEffect } from 'react'
 import { supabase } from './helper.js'
 import { StyleSheet, View, Alert } from 'react-native'
 import { Button, Input } from 'react-native-elements'
+import { useNavigation } from '@react-navigation/native';
+
 
 export function Account({ session }) {
+
+    const navigation = useNavigation();
+
+    const handleButtonPress_jouer = () => {
+        navigation.navigate('GameScreen');
+      };
+
     const [loading, setLoading] = useState(true);
     const [username, setUsername] = useState('');
     const [website, setWebsite] = useState('');
@@ -74,22 +83,26 @@ export function Account({ session }) {
           <Input label="Email" value={session?.user?.email} disabled />
         </View>
         <View style={styles.verticallySpaced}>
-          <Input label="Username" value={username || ''} onChangeText={(text) => setUsername(text)} />
+          <Input label="Pseudo" value={username || ''} onChangeText={(text) => setUsername(text)} />
         </View>
         <View style={styles.verticallySpaced}>
-          <Input label="Website" value={website || ''} onChangeText={(text) => setWebsite(text)} />
+          <Input label="Votre plus grande réussite" value={website || ''} onChangeText={(text) => setWebsite(text)} />
         </View>
   
         <View style={[styles.verticallySpaced, styles.mt20]}>
           <Button
-            title={loading ? 'Loading ...' : 'Update'}
+            title={loading ? 'Loading ...' : 'Mettre à jour'}
             onPress={() => updateProfile({ username, website, avatar_url: avatarUrl })}
             disabled={loading}
           />
         </View>
   
         <View style={styles.verticallySpaced}>
-          <Button title="Sign Out" onPress={() => supabase.auth.signOut()} />
+          <Button title="Déconnexion" onPress={() => supabase.auth.signOut()} />
+        </View>
+
+        <View style={styles.verticallySpaced}>
+          <Button title="Jouer" onPress={handleButtonPress_jouer} />
         </View>
       </View>
     );

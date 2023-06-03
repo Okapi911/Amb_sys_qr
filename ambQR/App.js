@@ -14,6 +14,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Inscription } from './inscription.js';
 import { Connexion } from './connexion.js';
 import { GameScreen } from './game_screen_qr.js';
+import { ScanScreen } from './scan_screen_qr.js';
 
 const Stack = createStackNavigator();
 
@@ -90,6 +91,7 @@ export default function App() {
       <Stack.Screen name="Inscription" component={Inscription} />
       <Stack.Screen name="Connexion" component={Connexion} />
       <Stack.Screen name="GameScreen" component={GameScreen} />
+      <Stack.Screen name="ScanScreen" component={ScanScreen} />
     </Stack.Navigator>
     </NavigationContainer>
   );

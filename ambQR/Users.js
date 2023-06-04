@@ -11,30 +11,32 @@ export async function getCurrentUserID(){
 export async function getCurrentScore(){
     const { data, error } = await supabase.auth.api.getUser()
     if (error) console.log(error)
-    return data.user_metadata.full_name
+    return parseInt(data.user_metadata.full_name)
 }
 
+//score is an integer
 export async function setCurrentScore(score){
     const { data, error } = await supabase.auth.api.updateUser({
-        data: { full_name: score },
+        data: { full_name: score.toString() },
     })
     if (error) console.log(error)
     return data
 }
 
+//returns an integer
 export async function getScoreByID(userId){
     const { data, error } = await supabase
     .from('Users')
     .select('full_name')
     .eq('id', userId)
     if (error) console.log(error)
-    return data[0].full_name
+    return parseInt(data[0].full_name)
 }
 
 export async function setUserNameByID(userId,score){
     const { data, error } = await supabase
     .from('Users')
-    .update({ full_name: score })
+    .update({ full_name: score.toString() })
     .eq('id', userId)
     if (error) console.log(error)
     return data

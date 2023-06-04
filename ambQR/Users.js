@@ -8,6 +8,9 @@ export async function getCurrentUserID(){
     return data.id
 }
 
+//façon très sale de gérer des scores, mais au moins ça marche
+
+//returns an integer
 export async function getCurrentScore(){
     const { data, error } = await supabase.auth.api.getUser()
     if (error) console.log(error)
@@ -33,7 +36,7 @@ export async function getScoreByID(userId){
     return parseInt(data[0].full_name)
 }
 
-export async function setUserNameByID(userId,score){
+export async function setScoreByID(userId,score){
     const { data, error } = await supabase
     .from('Users')
     .update({ full_name: score.toString() })

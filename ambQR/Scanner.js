@@ -5,6 +5,7 @@ import { Button, Input } from 'react-native-elements'
 import QRCode from 'react-native-qrcode-svg';
 import { useNavigation } from '@react-navigation/native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
+import {getScoreByID, setCurrentScore, setScoreByID} from './Users.js';
 
 
 export function Scanner () {
@@ -23,6 +24,12 @@ export function Scanner () {
   /*Lorsqu'un QR code est scanné cette fonction est appelée. data est le texte contenu dans le qr_code, à utiliser pour modifier le score  du joueur adverse*/
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
+
+    //Current player gains points
+    setCurrentScore(getCurrentScore()+1)
+
+    //Scanned player looses points
+    setScoreByID(data, Math.max(getScoreByID(data)-1, 0))
     alert(`Le QR code du joueur ${data} a été scanné avec succès!`);
   };
 

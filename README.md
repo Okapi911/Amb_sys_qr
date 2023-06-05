@@ -2,8 +2,7 @@
 
 ## Présentation du projet
 
-QR TAG est une application Android développée dans le cadre du 
-[cours d'Ambiant Systems du département informatique de l'école des Mines de Nancy.] (https://mines-nancy.univ-lorraine.fr/cours/ambient-systems-iss8af/).
+QR TAG est une application Android développée dans le cadre du ###[cours d'Ambiant Systems du département informatique de l'école des Mines de Nancy.] (https://mines-nancy.univ-lorraine.fr/cours/ambient-systems-iss8af/).
 
 Elle se présente sous la forme d'un jeu au cours duquel après s'être connectés, les utilisateurs peuvent ajuster leur profil, produire un QR code unique qui les identifie, et scanner les QR codes d'autres joueurs dans le cadre d'un système se score semblable à celui d'un lasergame. 
 
@@ -18,9 +17,16 @@ Ce répertoire git est divisé entre deux sous-dossiers : AmbDB et AmbQR. Néanm
 Toutefois suite à des problèmes de compatibilité entre les outils Heroku et les frameworks React Natif, nous avons abandonné cette première architecture pour utiliser plutôt les services de database de Supabase. Ils nous permettent d'assurer l'authentification des utilisateurs (connexion et inscription).
 
 L'application a été développée en utilisant le framework Expo pour le développement et Expo Go pour la phase de tests. Ce framework React Natif permet de développer une application compatible avec la plupart des Android et produits IOS, mais aussi accessible sur le web. Cependant nous avons très vite abandonné la compatibilité avec les IOS (pour lesquels nous ne pouvions pas effectuer de tests puisque nous n'en possédons pas) et le web (car la lecture de QR code y aurait nécessité une implémentation très différente). Ainsi si vous souhaitez clôner ce répertoire, pour accéder à l'application il faudra utiliser la commande 
+
+
 <div align="center">npx expo start </div>
+
+
 et scanner le QR code avec Expo Go après s'être connecté à Expo Cli depuis l'ordinatieur où aura effectué un 
+
+
 <div align="center">npm install </div>
+
  
 La lecture et la génération de QR codes a été mise en place à partir des librairies 'react-native-qrcode-svg' et 'expo-barcode-scanner' ainsi qu'en accédant aux permissions de l'appareil mobile pour demander l'accès à la caméra de l'appareil.
 

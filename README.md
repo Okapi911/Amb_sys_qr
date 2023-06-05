@@ -1,4 +1,4 @@
-# [Amb_sys_qr]
+# [Amb_sys_qr](https://github.com/Okapi911/Amb_sys_qr/edit/main/README.md)
 
 ## Présentation du projet
 
@@ -20,14 +20,12 @@ L'application a été développée en utilisant le framework Expo pour le dével
 
 
 <div align="center">npx expo start --tunnel</div>
-<div>
 
 
 et scanner le QR code avec Expo Go après s'être connecté à Expo Cli depuis l'ordinatieur où aura effectué un 
 
 
 <div align="center">npm install </div>
- <div>
 
  
 La lecture et la génération de QR codes a été mise en place à partir des librairies 'react-native-qrcode-svg' et 'expo-barcode-scanner' ainsi qu'en accédant aux permissions de l'appareil mobile pour demander l'accès à la caméra de l'appareil.

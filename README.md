@@ -2,7 +2,7 @@
 
 ## Présentation du projet
 
-QR TAG est une application Android développée dans le cadre du ###[cours d'Ambiant Systems du département informatique de l'école des Mines de Nancy](https://mines-nancy.univ-lorraine.fr/cours/ambient-systems-iss8af/).
+QR TAG est une application Android développée dans le cadre du [cours d'Ambiant Systems du département informatique de l'école des Mines de Nancy](https://mines-nancy.univ-lorraine.fr/cours/ambient-systems-iss8af/).
 
 Elle se présente sous la forme d'un jeu au cours duquel après s'être connectés, les utilisateurs peuvent ajuster leur profil, produire un QR code unique qui les identifie, et scanner les QR codes d'autres joueurs dans le cadre d'un système se score semblable à celui d'un lasergame. 
 
@@ -34,7 +34,8 @@ La lecture et la génération de QR codes a été mise en place à partir des li
 
 - Front End et accès aux outils Android --> Lucas Kloubert
 - Mise en place d'un serveur Heroku (inutilisé dans le build final)   --> Pierre Anxionnat
-- Authentification et profil utilisateur avec Supabase    --> Lucas Kloubert
+- Authentification avec Supabase (confirmation par mail) --> Pierre Anxionnat et Lucas Kloubert
+- Profil utilisateur modifiable avec Supabase    --> Lucas Kloubert
 - Tests de l'application et debug   --> Lucas Kloubert
 - Appels à la database lors d'une lecture de QR code --> Pierre Anxionnat
 - Support de présentation (format pptx)   --> Lucas Kloubert et Pierre Anxionnat
